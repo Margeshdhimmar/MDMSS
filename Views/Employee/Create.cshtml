@@ -1,0 +1,101 @@
+﻿@model MD.Models.New_Employee.EmployeeModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+
+
+@*@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>EmployeeModel</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@
+
+
+<section class="content">
+    <div class="container  pr-5 pl-5 pt-3 pb-3">
+        @*<h3>Create NewOne</h3>*@
+        <div class="card card-primary border-info p-1  shadow shadow-lg">
+            <div class="card-header bg-info text-white">
+                <h6 class="col-md-11 mt-2" style="text-align:center; float:left;  ">Hello User </h6>
+            </div>
+            <div class="card-body bg-secondary">
+                <div class="form-row">
+                    <div class="col-md-12" style="text-align:center;">
+                        <div class="form-group row mb-0">
+                            <label for="EmailID" class="col-4 pr-0 col-form-label">Email-ID <span class="text-danger">*</span></label>
+                            <div class="col-5" style="margin-left: -3%;">
+                                <div class="input-group input-group-sm">
+                                    <input type="email" class="form-control required form-control-sm" id="EmployeeEmailID" name="EmployeeEmailID" placeholder="Enter Your Email" />
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-group row mb-0">
+                            <label for="Password" class="col-4 pr-0 col-form-label">Password </label>
+                            <div class="col-5" style="margin-left: -3%;">
+                                <div class="input-group input-group-sm">
+                                    <input type="email" class="form-control required form-control-sm" id="EmployeeEmailID" name="EmployeeEmailID" placeholder="Enter Your Password" />
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+
+                        <div class=" form-group row mb-0">
+                            <div class="col-4 "></div>
+                            <div class="col-8 " style="margin-left:-3%;">
+                                <div class="input-group input-group-sm">
+                                    <input type="submit" value="LOGIN" class="btn btn-outline-info" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bg-dark ">
+                <div class="form-row text-right mt-2">
+                    <div class="col-md-12">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

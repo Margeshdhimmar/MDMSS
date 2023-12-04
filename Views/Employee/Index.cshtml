@@ -1,0 +1,121 @@
+﻿@model IEnumerable<MD.Models.New_Employee.EmployeeModel>
+
+
+@*<h2>Index</h2>*@
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+
+
+<a href="~/Employee/Create"> <button id="Create" class="btn btn-info" style="float:right";>New One</button> </a>
+<br />
+<br />
+<hr />
+
+@*<table class="table table-info table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+               Action
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+    </table>*@
+
+
+<table class="table table-info table-striped">
+    <tr>
+        <th> ID </th>
+        <th> Email </th>
+        <th> Password  </th>
+        <th> Action </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                <a href="#" class="btn btn-secondary">Edit</a> |
+                @*@Html.ActionLink("Delete", "Delete", new { id = item.ID })*@
+                <a herf="#" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+<section class="cotntain">
+    <div class="container pr-5 pl-5 tm-2 ">
+        <div class="card card-primary border-info p-1 shadow shadow-lg">
+            <div class="card-header bg-info text-white">
+                <h6>Videos</h6>
+            </div>
+            <div class="card-body bg-secondary">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                                The current link item
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                            <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                            <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                            <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">A disabled link item</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="list-group bg-danger">
+                            <iframe 
+                                    height="200"
+                                    src="https://www.youtube.com/embed/4YAAgrm8_ZI?si=gx6xSR2AhXxfb_jj"
+                                    title="YouTube video player"
+                                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bg-dark">
+                <a href="#" type="button" value="Back" style="float:right;"><button class="btn btn-outline-light">BACK</button> </a>
+            </div>
+        </div>
+    </div>
+</section>
